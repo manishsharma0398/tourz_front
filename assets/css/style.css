@@ -52,6 +52,13 @@ main #sidebar .logo h4 {
   font-size: 25px;
   line-height: 70px;
   color: #000000;
+  cursor: pointer;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+
+main #sidebar .logo h4:hover {
+  color: #2c47c8;
 }
 
 main #sidebar .selectors {
@@ -112,6 +119,8 @@ main #sidebar .selectors .settings.active::before {
   content: "";
   position: absolute;
   border-left: 5px solid #2c47c8;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   top: 0;
   left: 0;
   height: 100%;
@@ -144,6 +153,37 @@ main #navbar {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom: 3px solid #9fa1b6;
+}
+
+main #navbar .search input.search-box {
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #9fa1b6;
+  color: #2c47c8;
+  width: 200px;
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+}
+
+main #navbar .search input.search-box::-webkit-input-placeholder {
+  color: #2c47c8;
+}
+
+main #navbar .search input.search-box:-ms-input-placeholder {
+  color: #2c47c8;
+}
+
+main #navbar .search input.search-box::-ms-input-placeholder {
+  color: #2c47c8;
+}
+
+main #navbar .search input.search-box::placeholder {
+  color: #2c47c8;
+}
+
+main #navbar .search input.search-box:focus {
+  outline: none;
+  width: 400px;
 }
 
 main #navbar .navbar-user {
@@ -277,6 +317,8 @@ main #menu ul.menu-options li.active::before {
   content: "";
   position: absolute;
   border-left: 5px solid #2c47c8;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   top: 0;
   left: 0;
   height: 100%;

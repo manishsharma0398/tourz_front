@@ -47,6 +47,12 @@ main {
         font-size: 25px;
         line-height: 70px;
         color: #000000;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: $color-blue;
+        }
       }
     }
 
@@ -83,6 +89,8 @@ main {
             content: "";
             position: absolute;
             border-left: 5px solid $color-blue;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
             top: 0;
             left: 0;
             height: 100%;
@@ -117,7 +125,22 @@ main {
     border-bottom: $border-dark;
 
     .search {
-      input {
+      input.search-box {
+        font-size: 18px;
+        border: none;
+        border-bottom: 2px solid $border;
+        color: $color-blue;
+        width: 200px;
+        transition: width 0.3s linear;
+
+        &::placeholder {
+          color: $color-blue;
+        }
+
+        &:focus {
+          outline: none;
+          width: 400px;
+        }
       }
     }
 
@@ -221,6 +244,8 @@ main {
           content: "";
           position: absolute;
           border-left: 5px solid $color-blue;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
           top: 0;
           left: 0;
           height: 100%;
