@@ -5,8 +5,7 @@ $color-blue-light: rgba(106, 137, 204, 0.2);
 $color-text: #5d5c5f;
 $border: #9fa1b6;
 
-$border-dark: 3px solid $border;
-$border-light: 2px solid $border;
+$border-light: 1px solid $border;
 
 html,
 body {
@@ -23,17 +22,15 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 100px 180px 4fr 2fr;
+  grid-template-columns: 100px 180px 4fr 3fr;
   grid-template-rows: 73px 1fr;
   grid-template-areas:
     "sidebar navbar navbar    navbar"
     "sidebar menu   main-body activities";
-  border: $border-light;
-  margin: 5px;
 
   #sidebar {
     grid-area: sidebar;
-    border-right: $border-dark;
+    border-right: $border-light;
 
     .logo {
       height: 73px;
@@ -48,10 +45,14 @@ main {
         line-height: 70px;
         color: #000000;
         cursor: pointer;
-        transition: color 0.2s ease-in-out;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+          0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
         &:hover {
           color: $color-blue;
+          text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
         }
       }
     }
@@ -79,18 +80,11 @@ main {
 
         &.active {
           position: relative;
-          background-color: $color-blue-light;
-
-          img {
-            fill: $color-blue;
-          }
 
           &::before {
             content: "";
             position: absolute;
-            border-left: 5px solid $color-blue;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
+            border-left: 3px solid $color-blue;
             top: 0;
             left: 0;
             height: 100%;
@@ -101,9 +95,6 @@ main {
       .home {
         margin-bottom: 50px;
       }
-
-      // .settings {
-      // }
 
       .home img,
       .settings img {
@@ -121,25 +112,37 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    border-bottom: $border-dark;
+    border-bottom: $border-light;
 
     .search {
+      display: flex;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -2px;
+      }
+
       input.search-box {
-        font-size: 18px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-size: 17px;
         border: none;
         border-bottom: 2px solid $border;
         color: $color-blue;
         width: 200px;
-        transition: width 0.3s linear;
+        transition: all 0.3s linear;
+        padding-left: 25px;
 
         &::placeholder {
           color: $color-blue;
+          font-size: 18px;
         }
 
         &:focus {
           outline: none;
           width: 400px;
+          // font-size: 16px;
         }
       }
     }
@@ -152,9 +155,23 @@ main {
       .notifications {
         display: flex;
         align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 11px;
+          top: 2px;
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background-color: #f16a5e;
+        }
 
         img {
           padding-right: 10px;
+          width: 37px;
         }
       }
 
@@ -179,21 +196,22 @@ main {
       }
 
       .user-img {
+        position: relative;
+
         img {
           width: 55px;
           height: 55px;
           border-radius: 50%;
-          border: 1px solid black;
           display: flex;
-          position: relative;
-          z-index: -10;
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23),
+            0 8px 12px rgba(0, 0, 0, 0.19);
         }
 
         &::after {
           content: "";
           position: absolute;
-          top: 16px;
-          right: 28px;
+          top: 8px;
+          left: 44px;
           height: 15px;
           width: 15px;
           border-radius: 50%;
@@ -238,16 +256,13 @@ main {
 
       li.active {
         position: relative;
-        background-color: $color-blue-light;
 
         &::before {
           content: "";
           position: absolute;
-          border-left: 5px solid $color-blue;
-          border-top-right-radius: 5px;
-          border-bottom-right-radius: 5px;
+          border-left: 3px solid $color-blue;
           top: 0;
-          left: 0;
+          left: -2px;
           height: 100%;
         }
 
@@ -260,8 +275,8 @@ main {
 
   #body {
     grid-area: main-body;
-    border-left: $border-dark;
-    border-right: $border-dark;
+    border-left: $border-light;
+    border-right: $border-light;
   }
 
   #activities {
@@ -273,7 +288,6 @@ main {
         margin-bottom: 10px;
         font-weight: 600;
         color: #000000;
-        // font-family: "Fredoka One", cursive;
         font-family: "Open Sans", sans-serif;
         font-size: 20px;
       }
@@ -337,4 +351,17 @@ main {
       }
     }
   }
+}
+
+@media (min-width: 1400px) {
+  main {
+    max-width: 1240px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+
+main {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
