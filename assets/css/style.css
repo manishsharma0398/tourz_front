@@ -18,8 +18,8 @@ main {
   display: grid;
   -ms-grid-columns: 100px 180px 4fr 3fr;
       grid-template-columns: 100px 180px 4fr 3fr;
-  -ms-grid-rows: 73px 1fr;
-      grid-template-rows: 73px 1fr;
+  -ms-grid-rows: 60px 1fr;
+      grid-template-rows: 60px 1fr;
       grid-template-areas: "sidebar navbar navbar    navbar" "sidebar menu   main-body activities";
 }
 
@@ -124,12 +124,12 @@ main #sidebar .selectors .home {
 
 main #sidebar .selectors .home img,
 main #sidebar .selectors .settings img {
-  height: 32px;
-  width: 32px;
+  height: 20px;
+  width: 20px;
 }
 
 main #navbar {
-  height: 73px;
+  height: 60px;
   padding: 0 20px;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
@@ -156,19 +156,13 @@ main #navbar .search {
 
 main #navbar .search img {
   position: absolute;
-  top: -2px;
 }
 
 main #navbar .search input.search-box {
-  padding-top: 3px;
-  padding-bottom: 3px;
   font-size: 17px;
   border: none;
-  border-bottom: 2px solid #9fa1b6;
   color: #2c47c8;
-  width: 200px;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  width: 300px;
   padding-left: 25px;
 }
 
@@ -194,7 +188,6 @@ main #navbar .search input.search-box::placeholder {
 
 main #navbar .search input.search-box:focus {
   outline: none;
-  width: 400px;
 }
 
 main #navbar .navbar-user {
@@ -236,6 +229,8 @@ main #navbar .navbar-user .notifications::after {
 main #navbar .navbar-user .notifications img {
   padding-right: 10px;
   width: 37px;
+  height: 30px;
+  width: 30px;
 }
 
 main #navbar .navbar-user .user-details {
@@ -272,8 +267,8 @@ main #navbar .navbar-user .user-img {
 }
 
 main #navbar .navbar-user .user-img img {
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,8 +280,8 @@ main #navbar .navbar-user .user-img img {
 main #navbar .navbar-user .user-img::after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 44px;
+  top: 5px;
+  left: 30px;
   height: 15px;
   width: 15px;
   border-radius: 50%;
