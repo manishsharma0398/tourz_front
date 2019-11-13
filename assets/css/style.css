@@ -307,12 +307,6 @@ main #menu {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: menu;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
 }
 
@@ -322,9 +316,9 @@ main #menu ul.menu-options {
 }
 
 main #menu ul.menu-options li.menu-item {
+  height: 100%;
   cursor: pointer;
-  padding: 15px 0 15px 20px;
-  margin-bottom: 10px;
+  display: block;
 }
 
 main #menu ul.menu-options li.menu-item:first-child {
@@ -332,11 +326,77 @@ main #menu ul.menu-options li.menu-item:first-child {
 }
 
 main #menu ul.menu-options li.menu-item a.menu-link {
+  display: block;
+  height: 100%;
+  padding: 15px 0 15px 20px;
   text-decoration: none;
   font-size: 15px;
   color: #5d5c5f;
   font-family: "Open Sans", sans-serif;
-  font-weight: 600;
+}
+
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span {
+  position: relative;
+}
+
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::before, main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::after {
+  top: 50%;
+}
+
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::after {
+  -webkit-transform: rotateY(45deg);
+          transform: rotateY(45deg);
+}
+
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::before {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::before, main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::after {
+  content: "";
+  top: 40%;
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: black;
+  border-left: 1px solid;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::before {
+  left: calc(100% + 18px);
+}
+
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::after {
+  left: calc(100% + 9px);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+main #menu ul.menu-options li.menu-item .dropdown-menu {
+  padding-left: 40px;
+  height: 0;
+  overflow: hidden;
+}
+
+main #menu ul.menu-options li.menu-item .dropdown-menu.show {
+  height: 100%;
+}
+
+main #menu ul.menu-options li.menu-item .dropdown-menu.hide {
+  height: 0;
+}
+
+main #menu ul.menu-options li.menu-item .dropdown-menu .dropdown-item {
+  display: block;
+  color: #5d5c5f;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
 }
 
 main #menu ul.menu-options li.menu-item:hover {
@@ -585,11 +645,6 @@ main {
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     margin: 0;
   }
-  main #menu ul.menu-options li.menu-item {
-    display: block;
-    padding: 8px 0 8px 20px;
-    margin-bottom: 0px;
-  }
   main #menu ul.menu-options li.menu-item:first-child {
     margin-top: 0;
   }
@@ -597,65 +652,17 @@ main {
     padding-bottom: 15px;
   }
   main #menu ul.menu-options li.menu-item a.menu-link {
+    padding: 8px 0 8px 20px;
     font-size: 16px;
     color: white;
     display: block;
-    position: relative;
-  }
-  main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span {
-    position: relative;
-  }
-  main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::before, main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::after {
-    top: 50%;
-  }
-  main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::after {
-    -webkit-transform: rotateY(45deg);
-            transform: rotateY(45deg);
-  }
-  main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::before {
-    -webkit-transform: rotateX(-180deg);
-            transform: rotateX(-180deg);
   }
   main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::before, main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::after {
-    content: "";
-    top: 40%;
-    position: absolute;
-    width: 18px;
-    height: 2px;
     background-color: white;
-    border-left: 1px solid;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-  }
-  main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::before {
-    left: calc(100% + 18px);
-  }
-  main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::after {
-    left: calc(100% + 9px);
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  main #menu ul.menu-options li.menu-item .dropdown-menu {
-    padding-left: 20px;
-    height: 0;
-    overflow: hidden;
-  }
-  main #menu ul.menu-options li.menu-item .dropdown-menu.show {
-    height: 100%;
-  }
-  main #menu ul.menu-options li.menu-item .dropdown-menu.hide {
-    height: 0;
   }
   main #menu ul.menu-options li.menu-item .dropdown-menu .dropdown-item {
-    padding-top: 8px;
-    display: block;
     color: white;
-    text-decoration: none;
     font-size: 16px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
   }
   main #menu ul.menu-options li.menu-item:hover {
     background-color: transparent;
