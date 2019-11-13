@@ -24,6 +24,18 @@
       </section>
 
       <section id="navbar">
+        <div class="nav-toggler">
+          <label class="toggler-switch" for="toggle-menubar_checkbox">
+            <span class="line top"></span>
+            <span class="line center"></span>
+            <span class="line bottom"></span>
+          </label>
+          <input type="checkbox" id="toggle-menubar_checkbox" />
+          <!-- <img src="./assets/img/mob/menu_bar.svg" alt="navbar" /> -->
+        </div>
+        <div class="navbar-head">
+          <h4 class="logo">Tourz</h4>
+        </div>
         <div class="search">
           <img src="assets/img/search.svg" alt="" />
           <input type="text" class="search-box" placeholder="Search...." />
@@ -36,49 +48,54 @@
             <p class="user-name">Manish</p>
             <p class="user-type">Admin</p>
           </div>
-          <div class="user-img">
-            <img src="./assets/img/li.jpg" alt="" />
-          </div>
+        </div>
+        <div class="user-img">
+          <img src="./assets/img/li.jpg" alt="" />
         </div>
       </section>
 
       <section id="menu">
         <ul class="menu-options">
           <li class="menu-item active">
-            <a href="#!" class="menu-link">Overview</a>
+            <a href="#!" class="menu-link"><span>Overview</span></a>
           </li>
           <li class="menu-item">
-            <a href="#!" class="menu-link">Bookings</a>
+            <a href="#!" class="menu-link dropdown-toggle"
+              ><span>Bookings</span></a
+            >
+            <div class="dropdown-menu hide">
+              <a class="dropdown-item" href="#">Recent Booking</a>
+              <a class="dropdown-item" href="#">New Booking</a>
+            </div>
           </li>
           <li class="menu-item">
-            <a href="#!" class="menu-link">Transactions</a>
+            <a href="#!" class="menu-link dropdown-toggle"
+              ><span>Transactions</span></a
+            >
           </li>
           <li class="menu-item">
-            <a href="#!" class="menu-link">Tour Packages</a>
+            <a href="#!" class="menu-link dropdown-toggle"
+              ><span>Tour Management</span></a
+            >
+            <div class="dropdown-menu hide">
+              <a class="dropdown-item" href="#">Sight Seeing</a>
+              <a class="dropdown-item" href="#">Hotels</a>
+            </div>
           </li>
           <li class="menu-item">
-            <a href="#!" class="menu-link">Sight Seeing</a>
+            <a href="#!" class="menu-link"><span>Offers/Coupons</span></a>
           </li>
           <li class="menu-item">
-            <a href="#!" class="menu-link">Hotels</a>
+            <a href="#!" class="menu-link"><span>Customer Support</span></a>
           </li>
           <li class="menu-item">
-            <a href="#!" class="menu-link">Discount</a>
+            <a href="#!" class="menu-link"><span>User Management</span></a>
           </li>
           <li class="menu-item">
-            <a href="#!" class="menu-link">Offers</a>
+            <a href="#!" class="menu-link"><span>Settings</span></a>
           </li>
           <li class="menu-item">
-            <a href="#!" class="menu-link">Enquiry</a>
-          </li>
-          <li class="menu-item">
-            <a href="#!" class="menu-link">Blogs</a>
-          </li>
-          <li class="menu-item">
-            <a href="#!" class="menu-link">Pages</a>
-          </li>
-          <li class="menu-item">
-            <a href="#!" class="menu-link">Users</a>
+            <a href="#!" class="menu-link"><span>Logout</span></a>
           </li>
         </ul>
       </section>
@@ -114,5 +131,6 @@
         </div>
       </section>
     </main>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
