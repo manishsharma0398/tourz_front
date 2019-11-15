@@ -11,19 +11,17 @@ body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100px 200px 4fr 3fr;
-  grid-template-columns: 100px 200px 4fr 3fr;
+      grid-template-columns: 100px 200px 4fr 3fr;
   -ms-grid-rows: 60px 1fr;
-  grid-template-rows: 60px 1fr;
-  grid-template-areas:
-    "sidebar navbar navbar    navbar"
-    "sidebar menu   main-body activities";
+      grid-template-rows: 60px 1fr;
+      grid-template-areas: "sidebar navbar navbar    navbar" "sidebar menu   main-body activities";
 }
 
 main #sidebar {
@@ -40,11 +38,11 @@ main #sidebar .logo {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #sidebar .logo h4 {
@@ -71,14 +69,14 @@ main #sidebar .selectors {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #sidebar .selectors .home,
@@ -90,14 +88,14 @@ main #sidebar .selectors .settings {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
 }
 
@@ -141,11 +139,11 @@ main #navbar {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  grid-template-areas: "search . user-details user-img";
+      grid-template-areas: "search . user-details user-img";
   -ms-grid-columns: 300px 1fr 100px 50px;
-  grid-template-columns: 300px 1fr 100px 50px;
+      grid-template-columns: 300px 1fr 100px 50px;
   -ms-grid-rows: 59px;
-  grid-template-rows: 59px;
+      grid-template-rows: 59px;
   border-bottom: 1px solid #9fa1b6;
 }
 
@@ -162,8 +160,8 @@ main #navbar .search {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #navbar .search input.search-box {
@@ -206,8 +204,8 @@ main #navbar .navbar-user {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #navbar .navbar-user .notifications {
@@ -215,11 +213,11 @@ main #navbar .navbar-user .notifications {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 
@@ -248,14 +246,14 @@ main #navbar .navbar-user .user-details {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -279,8 +277,8 @@ main #navbar .user-img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #navbar .user-img img {
@@ -290,9 +288,8 @@ main #navbar .user-img img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23),
-    0 8px 12px rgba(0, 0, 0, 0.19);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23), 0 8px 12px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23), 0 8px 12px rgba(0, 0, 0, 0.19);
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23), 0 8px 12px rgba(0, 0, 0, 0.19);
 }
 
 main #navbar .user-img::after {
@@ -342,53 +339,21 @@ main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span {
   position: relative;
 }
 
-main
-  #menu
-  ul.menu-options
-  li.menu-item
-  a.menu-link.dropdown-toggle
-  span.show::before,
-main
-  #menu
-  ul.menu-options
-  li.menu-item
-  a.menu-link.dropdown-toggle
-  span.show::after {
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::before, main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::after {
   top: 50%;
 }
 
-main
-  #menu
-  ul.menu-options
-  li.menu-item
-  a.menu-link.dropdown-toggle
-  span.show::after {
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::after {
   -webkit-transform: rotateY(45deg);
-  transform: rotateY(45deg);
+          transform: rotateY(45deg);
 }
 
-main
-  #menu
-  ul.menu-options
-  li.menu-item
-  a.menu-link.dropdown-toggle
-  span.show::before {
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span.show::before {
   -webkit-transform: rotateX(-180deg);
-  transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
 }
 
-main
-  #menu
-  ul.menu-options
-  li.menu-item
-  a.menu-link.dropdown-toggle
-  span::before,
-main
-  #menu
-  ul.menu-options
-  li.menu-item
-  a.menu-link.dropdown-toggle
-  span::after {
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::before, main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::after {
   content: "";
   top: 40%;
   position: absolute;
@@ -396,29 +361,19 @@ main
   height: 2px;
   background-color: black;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-main
-  #menu
-  ul.menu-options
-  li.menu-item
-  a.menu-link.dropdown-toggle
-  span::before {
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::before {
   left: calc(100% + 18px);
 }
 
-main
-  #menu
-  ul.menu-options
-  li.menu-item
-  a.menu-link.dropdown-toggle
-  span::after {
+main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::after {
   left: calc(100% + 9px);
   -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 main #menu ul.menu-options li.menu-item .dropdown-menu {
@@ -521,7 +476,7 @@ main #activities .user-activities .activity-list .activity::before {
   left: -3px;
   top: 9px;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 main {
@@ -534,9 +489,8 @@ main {
 @media only screen and (min-width: 1200px) {
   main {
     max-width: 1240px;
-    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
-      0 15px 12px rgba(0, 0, 0, 0.22);
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   }
 }
 
@@ -547,8 +501,8 @@ main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "navbar navbar navbar";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "navbar navbar navbar";
     overflow: hidden;
   }
   main #sidebar,
@@ -565,24 +519,16 @@ main {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: navbar;
-    -webkit-box-shadow: 0 3px 4px -3px black;
-    box-shadow: 0 3px 4px -3px black;
     display: -ms-grid;
     display: grid;
-    grid-template-areas: "nav-toggler nav-brand nav-user";
+        grid-template-areas: "nav-toggler nav-brand nav-user";
     -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
   main #navbar.close {
-    background: -webkit-gradient(
-      linear,
-      right top,
-      left top,
-      color-stop(50%, black),
-      color-stop(50%, transparent)
-    );
+    background: -webkit-gradient(linear, right top, left top, color-stop(50%, black), color-stop(50%, transparent));
     background: linear-gradient(to left, black 50%, transparent 50%);
     background-size: 200% 100%;
     background-position: right bottom;
@@ -597,14 +543,14 @@ main {
     grid-area: nav-toggler;
   }
   main #navbar .nav-toggler label.toggler-switch {
-    height: 30px;
-    width: 40px;
+    height: 21px;
+    width: 30px;
     position: relative;
     cursor: pointer;
   }
   main #navbar .nav-toggler label.toggler-switch.close .top {
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+            transform: rotate(45deg);
     top: 48%;
     width: 30px;
     left: -1px;
@@ -613,7 +559,7 @@ main {
   main #navbar .nav-toggler label.toggler-switch.close .bottom,
   main #navbar .nav-toggler label.toggler-switch.close .center {
     -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+            transform: rotate(-45deg);
     top: 48%;
     width: 30px;
     left: -1px;
@@ -653,16 +599,16 @@ main {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main #navbar .navbar-head {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: nav-brand;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   main #navbar .navbar-head .logo {
     color: #2c47c8;
@@ -681,8 +627,8 @@ main {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     justify-self: end;
   }
   main #navbar .user-img::after {
@@ -695,13 +641,17 @@ main {
     background-color: #000000;
     padding-left: 20px;
     width: 100vw;
+    height: 100vh;
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
     transition: -webkit-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     margin: 0;
     -webkit-transform: translate(100%, -1px);
-    transform: translate(100%, -1px);
+            transform: translate(100%, -1px);
+  }
+  main #menu ul.menu-options {
+    padding-top: 20px;
   }
   main #menu ul.menu-options li.menu-item:first-child {
     margin-top: 0;
@@ -710,28 +660,18 @@ main {
     padding-bottom: 15px;
   }
   main #menu ul.menu-options li.menu-item a.menu-link {
-    padding: 8px 0 8px 20px;
+    padding: 0 0 18px 40px;
     font-size: 16px;
     color: white;
     display: block;
   }
-  main
-    #menu
-    ul.menu-options
-    li.menu-item
-    a.menu-link.dropdown-toggle
-    span::before,
-  main
-    #menu
-    ul.menu-options
-    li.menu-item
-    a.menu-link.dropdown-toggle
-    span::after {
+  main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::before, main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::after {
     background-color: white;
   }
   main #menu ul.menu-options li.menu-item .dropdown-menu .dropdown-item {
     color: white;
     font-size: 16px;
+    padding: 0 0 18px 20px;
   }
   main #menu ul.menu-options li.menu-item:hover {
     background-color: transparent;
