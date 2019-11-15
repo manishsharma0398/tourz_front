@@ -360,7 +360,6 @@ main #menu ul.menu-options li.menu-item a.menu-link.dropdown-toggle span::before
   width: 18px;
   height: 2px;
   background-color: black;
-  border-left: 1px solid;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-transition: all 0.2s linear;
@@ -527,9 +526,14 @@ main {
         grid-template-areas: "nav-toggler nav-brand nav-user";
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
   main #navbar.close {
-    background-color: #000000;
+    background: -webkit-gradient(linear, right top, left top, color-stop(50%, black), color-stop(50%, transparent));
+    background: linear-gradient(to left, black 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
   }
   main #navbar .search,
   main #navbar .navbar-user {
@@ -644,6 +648,8 @@ main {
     transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     margin: 0;
+    -webkit-transform: translate(100%, -1px);
+            transform: translate(100%, -1px);
   }
   main #menu ul.menu-options li.menu-item:first-child {
     margin-top: 0;

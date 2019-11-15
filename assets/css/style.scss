@@ -130,10 +130,6 @@ main {
       display: flex;
       align-items: center;
 
-      img {
-        // position: absolute;
-      }
-
       input.search-box {
         font-size: 17px;
         border: none;
@@ -256,7 +252,6 @@ main {
           font-size: 15px;
           color: $color-text;
           font-family: "Open Sans", sans-serif;
-          // font-weight: 600;
 
           &.dropdown-toggle {
             span {
@@ -284,7 +279,6 @@ main {
                 width: 18px;
                 height: 2px;
                 background-color: black;
-                border-left: 1px solid;
                 transform: translate(-50%, -50%);
                 transition: all 0.2s linear;
               }
@@ -314,7 +308,6 @@ main {
           }
 
           .dropdown-item {
-            // padding-top: 8px;
             display: block;
             color: $color-text;
             text-decoration: none;
@@ -397,31 +390,10 @@ main {
             position: absolute;
             background-color: $color-green;
             border-radius: 50%;
-            // background-image: url("../img/li.jpg");
-            // background-size: cover;
-            // background-position: center;
             left: -3px;
             top: 9px;
             transform: translateY(-50%);
           }
-
-          // &::after {
-          //   content: "";
-          //   width: 3px;
-          //   height: calc(100% + 12px);
-          //   position: absolute;
-          //   background-color: $border;
-          //   left: 1px;
-          //   top: 48px;
-          //   transform: translate(-35%, -50%);
-          // }
-
-          // &:last-child {
-          //   &::after {
-          //     height: 90%;
-          //     top: 40px;
-          //   }
-          // }
         }
       }
     }
@@ -434,10 +406,6 @@ main {
   margin-left: auto;
 }
 
-// // Custom, iPhone Retina
-// @media only screen and (min-width: 320px) {
-// }
-
 // /* Small Devices, Tablets */
 // @media only screen and (min-width: 768px) {
 // }
@@ -448,7 +416,6 @@ main {
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
-  // or 1400px
   main {
     max-width: 1240px;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -457,13 +424,7 @@ main {
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 0) and (max-width: 500px) {
-  body {
-    // max-width: 500px;
-    // overflow-y: hidden; // hide vertical
-    // overflow-x: hidden; // hide horizontal
-  }
   main {
-    // padding: 0 20px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -471,8 +432,6 @@ main {
     overflow: hidden;
 
     #sidebar,
-    // #navbar,
-    // #menu,
     #body,
     #activities {
       display: none;
@@ -490,9 +449,12 @@ main {
       display: grid;
       grid-template-areas: "nav-toggler nav-brand nav-user";
       grid-template-columns: 1fr 1fr 1fr;
+      transition: all 0.3s ease-in-out;
 
       &.close {
-        background-color: $color-black;
+        background: linear-gradient(to left, black 50%, transparent 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
       }
 
       .search,
@@ -508,7 +470,6 @@ main {
           width: 40px;
           position: relative;
           cursor: pointer;
-          // border: 1px solid black;
 
           &.close .top {
             transform: rotate(45deg);
@@ -540,7 +501,6 @@ main {
             height: 3px;
             background-color: $color-black;
             border-radius: 10px;
-            // right: 5px;
             transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
           }
 
@@ -550,7 +510,6 @@ main {
           span.center {
             width: 25px;
             top: 48%;
-            // left: 7px;
           }
           span.bottom {
             top: 78%;
@@ -590,8 +549,6 @@ main {
         align-items: center;
         justify-self: end;
 
-        // img {}
-
         &::after {
           top: 12px;
           left: 29px;
@@ -607,11 +564,10 @@ main {
       width: 100vw;
       transition: transform 0.3s ease-in-out;
       margin: 0;
+      transform: translate(100%, -1px);
 
       ul.menu-options {
         li.menu-item {
-          // padding: 8px 0 8px 20px;
-
           &:first-child {
             margin-top: 0;
           }
@@ -624,45 +580,12 @@ main {
             font-size: 16px;
             color: white;
             display: block;
-            //       position: relative;
 
             &.dropdown-toggle {
               span {
-                //           position: relative;
-
-                &.show {
-                  &::before,
-                  &::after {
-                    //               top: 50%;
-                  }
-
-                  &::after {
-                    //               transform: rotateY(45deg);
-                  }
-                  &::before {
-                    //               transform: rotateX(-180deg);
-                  }
-                }
-
                 &::before,
                 &::after {
-                  //             content: "";
-                  //             top: 40%;
-                  //             position: absolute;
-                  //             width: 18px;
-                  //             height: 2px;
                   background-color: white;
-                  //             border-left: 1px solid;
-                  //             transform: translate(-50%, -50%);
-                  //             transition: all 0.2s linear;
-                }
-
-                &::before {
-                  //             left: calc(100% + 18px);
-                }
-                &::after {
-                  //             left: calc(100% + 9px);
-                  //             transform: rotate(90deg);
                 }
               }
             }
