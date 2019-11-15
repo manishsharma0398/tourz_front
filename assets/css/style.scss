@@ -444,7 +444,6 @@ main {
       padding: 0 20px;
       border: none;
       grid-area: navbar;
-      box-shadow: 0 3px 4px -3px black;
 
       display: grid;
       grid-template-areas: "nav-toggler nav-brand nav-user";
@@ -466,8 +465,8 @@ main {
         grid-area: nav-toggler;
 
         label.toggler-switch {
-          height: 30px;
-          width: 40px;
+          height: 21px;
+          width: 30px;
           position: relative;
           cursor: pointer;
 
@@ -562,11 +561,13 @@ main {
       background-color: $color-black;
       padding-left: 20px;
       width: 100vw;
+      height: 100vh;
       transition: transform 0.3s ease-in-out;
       margin: 0;
       transform: translate(100%, -1px);
 
       ul.menu-options {
+          padding-top: 20px;
         li.menu-item {
           &:first-child {
             margin-top: 0;
@@ -576,7 +577,7 @@ main {
           }
 
           a.menu-link {
-            padding: 8px 0 8px 20px;
+            padding: 0 0 18px 40px;
             font-size: 16px;
             color: white;
             display: block;
@@ -595,6 +596,7 @@ main {
             .dropdown-item {
               color: white;
               font-size: 16px;
+              padding: 0 0 18px 20px;
             }
           }
 
